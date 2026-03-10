@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="min-h-screen">
+    <section ref={containerRef} className="min-h-screen w-screen h-auto relative overflow-hidden">
       <video
         src="/invideo.mp4"
         className="fixed inset-0 w-full h-full object-cover -z-10 scale-140 top-12"
@@ -42,15 +42,15 @@ export default function Hero() {
         className="relative z-10 h-screen w-full flex flex-col items-center justify-center bg-white"
         style={{ mixBlendMode: "screen", willChange: "transform" }}
       >
-        <h1 className="text-9xl font-bold tracking-wide font-display text-black relative top-2">
+        <h1 className="text-9xl font-bold tracking-wide font-playfair text-black relative right-3">
           RIESAL
         </h1>
         {/* Icono de scroll aquí */}
-        <div className="absolute bottom-22 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-80 animate-bounce pointer-events-none select-none">
+        <div className="absolute bottom-1/4 flex flex-col items-center opacity-80 animate-bounce pointer-events-none select-none">
           <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
-            <path d="M12 16V4M12 16l-6-6M12 16l6-6" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12 16V4M12 16l-6-6M12 16l6-6" stroke="#222" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          <span className="text-zinc-700 mt-1">Scroll</span>
+          <span className="text-zinc-700 mt-1 text-2xl font-black font-geistMono tracking-tight">Scroll</span>
         </div>
       </div>
     </section>
