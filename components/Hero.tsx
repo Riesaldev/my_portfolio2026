@@ -36,6 +36,7 @@ export default function Hero() {
         autoPlay
         loop
         muted
+        loads="eager"
       />
       <div
         ref={maskRef}
