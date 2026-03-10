@@ -25,10 +25,19 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background: black;
 }
 
-body {
-  background: var(--color-background);
+.lanyard-wrapper {
+  position: relative;
+  z-index: 0;
+  width: 200vh;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transform-origin: center;
 }
 
 .font-geistMono {

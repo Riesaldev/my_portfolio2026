@@ -3,7 +3,7 @@
 
 export default function Header() {
   return (
-    <header className="w-full py-6 px-16 flex items-center justify-between">
+    <header className="flex w-full py-6 px-16 items-center justify-between sticky top-0 z-30 bg-transparent backdrop-blur-sm rounded-2xl">
       <h1 className="text-2xl font-bold tracking-wide font-playfair text-white">
         RIESAL
       </h1>

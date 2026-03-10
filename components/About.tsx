@@ -1,26 +1,23 @@
-import Header from "./ui/Header";
-
+import Lanyard from './ui/Lanyard';
 
 export default function About() {
   return (
-    <section className="min-h-screen w-screen h-auto relative overflow-hidden bg-black">
-      <Header/>
+    <section className="min-h-screen w-screen h-auto relative bg-black">
       <main className="w-full grid grid-cols-2 gap-8 px-16 py-24">
-        <section className="flex flex-col gap-6">
-          <h2 className="text-4xl font-bold tracking-wide font-playfair text-white">
-            About Me
-          </h2>
+        <section className="flex flex-col gap-6 ">
+          <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
+            Knock knock.<br/>
+            <span className="font-playfair text-[#f5f5f5]">— Adelante —</span><br/>
+            responde una voz tranquila desde dentro.<br/>Abro la puerta.<br/>La sala es luminosa, moderna, con una mesa de madera clara y una pantalla apagada al fondo. Camino con paso firme, aunque siento esa chispa de adrenalina que siempre aparece antes de algo importante.<br/><span className="font-playfair text-[#f5f5f5]">
+            — Buenos días —</span><br/>digo con una sonrisa.<br/><span className="font-playfair text-[#f5f5f5]">— Mi nombre es Ricardo Estupiñán Alonso. Vengo a postular al puesto de Full‑Stack Developer.—</span><br/>El entrevistador me invita a sentarme. Sus gestos son amables, profesionales.<br/>—<span className="font-playfair text-[#f5f5f5]">Encantado, Ricardo. Empecemos por lo esencial. ¿Quién eres como desarrollador?</span><br/>Respiro un segundo. Me gusta empezar por lo que realmente importa.<br/>—<span className="font-playfair text-[#f5f5f5]">Soy alguien que disfruta construir experiencias modernas que sorprendan y que sean intuitivas. Me apasiona mezclar lógica con diseño, precisión con creatividad. Me encanta aprender tecnologías nuevas y aplicarlas para resolver problemas reales de forma elegante y eficiente.</span><br/>El entrevistador asiente, interesado.<br/>— <span className="font-playfair text-[#f5f5f5]">¿Y qué te motiva?</span>—<br/>—<span className="font-playfair text-[#f5f5f5]">La sensación de ver algo cobrar vida. De tomar una idea, un concepto, un problema… y convertirlo en una solución funcional, clara y bonita. Me gusta que las cosas funcionen, pero también que emocionen.</span>—<br/>— <span className="font-playfair text-[#f5f5f5]">Suena a que disfrutas el proceso.</span>—<br/>— <span className="font-playfair text-[#f5f5f5]">Si, muchísimo. Llevo dos años desarrollando por cuenta propia, construyendo proyectos completos, desde el diseño hasta el despliegue. Trabajo con React, Next, Astro, Node, Express, animaciones con GSAP, y últimamente estoy explorando experiencias más fluidas y accesibles. Mi objetivo es siempre el mismo; crear algo que valga la pena.</span>—<br/>El entrevistador sonríe.<br/>— <span className="font-playfair text-[#f5f5f5]">Perfecto. Entonces pasemos a tu experiencia.</span>—
+          </p>
         </section>
-        <section className="flex flex-col gap-4">
-          <p className="text-lg text-white leading-relaxed">
-            Hi! I`m RIESAL, a passionate web developer with a love for creating beautiful and functional websites. With a background in computer science and a keen eye for design, I enjoy bringing ideas to life through code.
-          </p>
-          <p className="text-lg text-white leading-relaxed">
-            I specialize in front-end development, using technologies like React, Next.js, and Tailwind CSS to build responsive and user-friendly interfaces. I`m always eager to learn new technologies and stay up-to-date with the latest trends in web development.
-          </p>
+        <section className="flex items-center justify-center z-30 p-8">
+          <div className="w-full h-auto flex justify-center ">
+            <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
+          </div>
         </section>
       </main>
     </section>
-
   );
 }
