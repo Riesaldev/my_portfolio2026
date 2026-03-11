@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Blurry",
+    "description": "es una app de citas que diseñé con un enfoque distinto. En lugar de mostrar todo de golpe, el usuario va desbloqueando la información de la otra persona a medida que interactúa. Trabajé mucho en el efecto blur, en las transiciones y en la sensación de misterio. Está construida con React y animaciones suaves para que se sienta moderna y fluida.",
+    "status": "MVP",
+    "tech": [ "TypeScript", "Vite", "GSAP" ],
+    "code": "https://github.com/...",
+    "live": "https://..."
+  },
+  {
+    "title": "LocalTaste",
+    "description": "Una plataforma para comprar productos locales directamente a productores, sin intermediarios. El usuario puede crear cestas personalizadas, explorar productos frescos y apoyar comercios locales.",
+    "status": "MVP",
+    "tech": [ "React", "Tailwind", "Framer Motion" ],
+    "code": "https://github.com/...",
+    "live": "https://..."
+  },
+  {
+    "title": "RollForge",
+    "description": "nació de mi amor por los juegos de rol. Quería crear un espacio donde jugadores y narradores pudieran gestionar partidas, personajes y campañas de forma intuitiva. Aquí trabajé con sistemas de datos más complejos, lógica de juego y una interfaz modular.",
+    "status": "MVP",
+    "tech": [ "Next.js", "Monaco Editor", "Node.js" ],
+    "code": "https://github.com/...",
+    "live": "https://..."
+  },
+  {
+    "title": "Perfil web de Recepcionista",
+    "description": "Aparece una web elegante, limpia, con transiciones suaves y un estilo muy personal.Este proyecto fue un ejercicio de diseño y sensibilidad visual. Quise crear un portfolio que reflejara la personalidad de la artista, con animaciones sutiles y una navegación muy fluida.",
+    "status": "Finalizado",
+    "tech": [ "React Native", "D3.js", "Firebase" ],
+    "code": "https://github.com/...",
+    "live": "https://mariabegueri.vercel.app"
+  },
+  {
+    "title": "Kroskagården Förskola",
+    "description": "Una plataforma educativa para gestionar actividades y comunicación en una escuela infantil. Permite a los profesores y padres mantenerse informados sobre el progreso y las actividades de los niños.",
+    "status": "Finalizado",
+    "tech": [ "React", "Node.js", "Firebase" ],
+    "code": "https://github.com/...",
+    "live": "https://..."
+  },
+  {
+    "title": "Mi primer Portfolio",
+    "description": "Mi primer portfolio fue un proyecto de aprendizaje donde experimenté con diferentes tecnologías y estilos. Fue un espacio para mostrar mis proyectos iniciales y aprender a estructurar una web personal.",
+    "status": "Finalizado",
+    "tech": [ "HTML", "CSS", "JavaScript" ],
+    "code": "https://github.com/...",
+    "live": "https://Riesaldev.vercel.app"
+  }
+]

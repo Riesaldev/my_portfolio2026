@@ -33,6 +33,7 @@ const slugs = [
   "gitlab",
   "visualstudiocode",
   "figma",
+  "postman"
 ];
 
 export default function IconGlobe() {

@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Header from "@/components/ui/Header";
 import Exp from "@/components/Exp";
+import Proyects from "@/components/Proyects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <div className="flex flex-col">
           <About />
           <Exp />
+          <Proyects />
         </div>
       </section>
     </section>

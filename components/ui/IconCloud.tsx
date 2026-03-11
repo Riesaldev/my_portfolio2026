@@ -21,14 +21,15 @@ export const cloudProps = {
     depth: 1,
     wheelZoom: false,
     imageScale: 2,
-    activeCursor: "default",
+    activeCursor: "pointer",
     tooltip: "native",
     initial: [0.1, -0.1],
     clickToFront: 500,
     tooltipDelay: 0,
-    outlineColour: "#000",
-    maxSpeed: 0.03,
+    outlineColour: "transparent",
+    maxSpeed: 0.02,
     minSpeed: 0.02,
+    dragControl: true,
   },
 };
 
