@@ -119,7 +119,7 @@ const ContactForm = () => {
       <GlassButton
         variant="gradient"
         size="md"
-        className="mt-4 mx-42"
+        className="mt-4"
       >
         {loading ? "Enviando..." : "Enviar mensaje"}
       </GlassButton>

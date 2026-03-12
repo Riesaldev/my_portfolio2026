@@ -52,7 +52,7 @@ export default function Proyects() {
   const aboutRefIntro = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
   const aboutRefOutro = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
   return (
-    <section className="relative w-screen bg-black">
+    <section id="projects" className="relative w-screen bg-black">
 
       {/* Título */}
       <h1 className="text-4xl font-bold text-primary flex items-center justify-center py-16">

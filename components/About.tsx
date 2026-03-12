@@ -6,7 +6,7 @@ export default function About() {
   const aboutRef = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
 
   return (
-    <section className="min-h-screen w-screen h-auto relative mt-8 bg-black p-8">
+    <section id="about" className="min-h-screen w-screen h-auto relative mt-8 bg-black p-8">
       <h1 className="text-4xl font-bold text-primary flex items-center justify-center">
         About Me
       </h1>

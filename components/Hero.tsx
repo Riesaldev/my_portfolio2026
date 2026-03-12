@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="min-h-screen w-screen h-auto relative overflow-hidden">
+    <section id="home" ref={containerRef} className="min-h-screen w-screen h-auto relative overflow-hidden">
       <video
         src="/invideo.mp4"
         className="fixed inset-0 w-full h-full object-cover -z-10 scale-140 top-12"

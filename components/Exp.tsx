@@ -7,7 +7,7 @@ export default function Exp() {
   const expRef = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
 
   return (
-    <section className="min-h-screen w-screen h-auto relative p-8 bg-background"><h1 className="text-4xl font-bold text-primary flex items-center justify-center mt-8">Experience / Education</h1>
+    <section className="min-h-screen w-screen h-auto relative p-8 bg-background" id="experience"><h1 className="text-4xl font-bold text-primary flex items-center justify-center mt-8">Experience / Education</h1>
       <main className="w-full grid grid-cols-2 gap-8 px-12 py-12">
         <section className="flex items-start justify-center z-10">
           <div className="w-full h-auto flex justify-center">

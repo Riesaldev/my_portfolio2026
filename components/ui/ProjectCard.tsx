@@ -18,8 +18,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
-  (props, ref) => {
-    const {
+  (
+    {
       index,
       title,
       description,
@@ -30,7 +30,9 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
       image,
       className,
       style
-    } = props;
+    },
+    ref
+  ) => {
     return (
       <div
         ref={ref}
@@ -61,12 +63,12 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
 
         {/* Contenido */}
         <div className="w-1/3 h-full p-6 flex flex-col justify-between">
-          <div className="border-b-2 border-[#00e0ff]/30 py-4 h-full flex flex-col justify-between">
-            <h3 className="text-4xl text-primary font-bold text-center mb-4">
+          <div className="border-b-2 border-[#00e0ff]/30 py-2 h-full flex flex-col justify-between">
+            <h3 className="md:text-4xl text-2xl text-primary font-bold text-center mb-4">
               {title}
             </h3>
 
-            <p className="text-neutral-400 mb-4 leading-relaxed">
+            <p className="text-neutral-400 mb-4 leading-relaxed md:text-base text-sm">
               {description}
             </p>
 
@@ -75,7 +77,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
                 {tech.map((t, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 text-xs rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700"
+                    className="px-2 py-1 text-xs md:text-sm hidden rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700"
                   >
                     {t}
                   </span>
@@ -85,7 +87,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
           </div>
 
           {/* Botones */}
-          <div className="flex items-center justify-around gap-4 mt-4">
+          <div className="flex items-center justify-around gap-4 mt-2">
             <div className="flex gap-4">
               {code && (
                 <a
@@ -111,7 +113,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
             {status && (
               <span
                 className={cn(
-                  "px-2 py-1 text-xs rounded-md",
+                  "px-2 py-1 text-xs md:text-sm rounded-md",
                   status === "MVP"
                     ? "bg-yellow-400 text-black"
                     : status === "En progreso"
