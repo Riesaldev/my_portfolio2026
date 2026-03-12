@@ -79,3 +79,89 @@
 .bg-background {
   background-color: var(--color-background);
 }
+
+/* Shine */
+@keyframes shine {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+/* Pulse hover */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Variantes manuales para Tailwind v4 */
+.group:hover .group-hover\:animate-shine {
+  animation: shine 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.group:hover .group-hover\:animate-pulse {
+  animation: pulse 0.6s ease-out forwards;
+}
+
+/* Glass input */
+.glass-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.glass-input:focus {
+  border-color: #7b5cff;
+  box-shadow: 0 0 12px rgba(123, 92, 255, 0.4);
+  outline: none;
+}
+
+/* Textarea */
+.glass-textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.glass-textarea:focus {
+  border-color: #00e0ff;
+  box-shadow: 0 0 12px rgba(0, 224, 255, 0.4);
+  outline: none;
+}
+
+/* Placeholder */
+.glass-input::placeholder,
+.glass-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.social-icon {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 50%;
+  transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 12px rgba(123, 92, 255, 0.5),
+    0 0 18px rgba(0, 224, 255, 0.4);
+  border-color: #7b5cff;
+}

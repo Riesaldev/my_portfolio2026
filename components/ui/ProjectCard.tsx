@@ -18,8 +18,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
-  (
-    {
+  (props, ref) => {
+    const {
       index,
       title,
       description,
@@ -30,13 +30,11 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
       image,
       className,
       style
-    },
-    ref
-  ) => {
+    } = props;
     return (
       <div
         ref={ref}
-        style={style} // ← AHORA SÍ FUNCIONA
+        style={style} 
         className={cn(
           "relative w-full h-full rounded-xl overflow-hidden will-change-transform",
           "bg-card border-3 border-[#00e0ff]/30 shadow-xl flex",
@@ -49,13 +47,13 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
         </div>
 
         {/* Imagen */}
-        <div className="w-2/3 h-full relative">
+        <div className="w-2/3 h-4/5 relative top-10 px-8 py-8 mx-4 my-2 rounded-2xl bg-gradient overflow-hidden">
           <Image
             src={image || "/placeholder.png"}
             width={600}
             height={400}
             alt={title}
-            className="w-full h-full object-cover opacity-90"
+            className="w-full h-full object-cover rounded-2xl"
           />
 
           <div className="absolute inset-0 bg-linear-to-br from-black/40 to-transparent pointer-events-none" />

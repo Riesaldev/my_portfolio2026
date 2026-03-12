@@ -5,6 +5,8 @@ import ProjectCard from "./ui/ProjectCard";
 import Projects from "@/data/projects.json";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useAnimateText } from '../hooks/useAnimateText';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,17 +24,17 @@ export default function Proyects() {
       gsap.fromTo(
   wrapper,
   {
-    y: 400,
+    y: 500, 
     scale: 0.9,
     opacity: 0,
-    zIndex: -1, // 👈 invisible = no bloquea clics
+    zIndex: 5,
   },
   {
-    y: i * 40,
+    y: i * 20,
     scale: 1,
     opacity: 1,
-    zIndex: i + 1, // 👈 visible = vuelve a su orden normal
-    rotate: (i % 2 === 0 ? -1 : 1) * (2 + Math.random() * 2),
+    zIndex: i + 1,
+    rotate: (i % 1.5 === 0 ? -0.8 : 1.8) * (0.5 + Math.random() * 1.8),
     ease: "power3.out",
     force3D: true,
     scrollTrigger: {
@@ -47,16 +49,20 @@ export default function Proyects() {
     });
   }, []);
 
+  const aboutRefIntro = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
+  const aboutRefOutro = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
   return (
     <section className="relative w-screen bg-black">
 
       {/* Título */}
-      <h1 className="text-4xl font-bold text-primary flex items-center justify-center my-8">
+      <h1 className="text-4xl font-bold text-primary flex items-center justify-center py-16">
         Projects
       </h1>
 
       {/* Intro narrativa */}
-      <section className="flex items-center justify-center pt-16 mx-auto">
+      <section
+      ref={aboutRefIntro}
+      className="flex items-center justify-center pt-16">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
           <span className="font-playfair text-[#f5f5f5]">— Muy bien, Ricardo —</span><br />
           dice el entrevistador mientras gira la pantalla hacia ti.<br />
@@ -68,18 +74,15 @@ export default function Proyects() {
       </section>
 
       {/* ESCENA STICKY */}
-      <section ref={containerRef} className="relative h-[400vh] w-full">
-
-        <div className="sticky top-0 h-screen flex items-center justify-center">
-
+      <section ref={containerRef} className="relative h-[500vh] w-full">
+        <div className="sticky -top-12 h-screen flex items-center justify-center">
           {/* Contenedor de las cards */}
           <div className="relative w-full max-w-5xl h-125">
-
             {Projects.map((p, i) => (
               <div
                 key={i}
                 ref={(el) => (wrappersRef.current[i] = el!)}
-                className="absolute top-0 left-0 w-full h-full pointer-events-auto"
+                className="absolute top-6 left-0 w-full h-full pointer-events-auto"
                 style={{ zIndex: i + 1 }}
               >
                 <ProjectCard
@@ -94,14 +97,13 @@ export default function Proyects() {
                 />
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
-
       {/* Outro narrativa */}
-      <section className="flex items-center justify-center px-16 my-18 mt-60 w-1/2 mx-auto">
+      <section 
+      ref={aboutRefOutro}
+      className="flex items-center justify-center px-16 my-18 mt-22 w-1/2 mx-auto">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
           El entrevistador sonríe, satisfecho.<br/> 
           <span className="font-playfair text-[#f5f5f5]">— Veo que tienes variedad, pero también coherencia. Te importa la experiencia, el detalle y la funcionalidad.</span><br />

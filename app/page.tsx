@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Header from "@/components/ui/Header";
 import Exp from "@/components/Exp";
 import Proyects from "@/components/Proyects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <About />
           <Exp />
           <Proyects />
+          <Contact />
         </div>
       </section>
     </section>
