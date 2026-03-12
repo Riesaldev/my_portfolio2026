@@ -4,6 +4,7 @@
     "description": "App web de citas basada en la idea de 'desenfocar' la apariencia física para fomentar conexiones más auténticas. Los usuarios crean perfiles con fotos borrosas y se centran en intereses y personalidad. El diseño es moderno, con animaciones suaves y una interfaz intuitiva.",
     "status": "MVP",
     "tech": [ "TypeScript", "Next.js", "Tailwind", "Next.js", "Framer Motion", "MySQL", "Socket.io" ],
+    "image": "/assets/bl.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/Blurry",
     "live": "https://..."
   },
@@ -12,6 +13,7 @@
     "description": "Una plataforma para comprar productos locales directamente a productores, sin intermediarios. El usuario puede crear cestas personalizadas, explorar productos frescos y apoyar comercios locales.",
     "status": "MVP",
     "tech": [ "Next.js", "Tailwind", "Node.js", "Express", "MySQL", "JWT", "Socket.io" ],
+    "image": "/assets/lt.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/LocalTaste",
     "live": "https://..."
   },
@@ -20,6 +22,7 @@
     "description": "Esta idea nació de mi amor por los juegos de rol y la necesidad de una plataforma para gestionar partidas de manera eficiente. Quería crear un espacio donde jugadores y directores de juego pudieran gestionar partidas, personajes y campañas de forma intuitiva y personalizada.",
     "status": "MVP",
     "tech": [ "React", "Vite", "TypeScript", "Node.js", "Express", "MySQL", "JWT", "Vitest" ],
+    "image": "/assets/rf.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/RollForge",
     "live": "https://..."
   },
@@ -37,6 +40,7 @@
     "description": "Este sitio web fue creado para una guardería en Suecia, con el objetivo de proporcionar información clara y atractiva para los padres. El diseño es sencillo y amigable, con secciones para mostrar las actividades diarias, el equipo de trabajo y un formulario de contacto.",
     "status": "Finalizado",
     "tech": [ "Next.js", "Tailwind", "i18n", "JavaScript", "Gsap", "Email.js" ],
+    "image": "/assets/kf.png",
     "code": "https://github.com/Riesaldev/Kr-kskogens-F-rskola",
     "live": "https://..."
   },
@@ -54,6 +58,7 @@
     "description": "Esta es una version simplificada de X (anteriormente Twitter) que desarrollé para practicar mis habilidades en React y Tailwind. La aplicación permite a los usuarios crear publicaciones, seguir a otros usuarios y ver un feed de noticias. El diseño es moderno y minimalista con animaciones suaves .",
     "status": "MVP",
     "tech": [ "Vite", "TypeScript", "Tailwind", "MySQL", "React", "Bootstrap" ],
+    "image": "/assets/mx.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/MinX",
     "live": "https://..."
   },
