@@ -6,7 +6,7 @@
     "tech": [ "TypeScript", "Next.js", "Tailwind", "Next.js", "Framer Motion", "MySQL", "Socket.io" ],
     "image": "/assets/bl.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/Blurry",
-    "live": "https://..."
+    "live": "https://blurry-six.vercel.app/"
   },
   {
     "title": "LocalTaste",
@@ -15,7 +15,7 @@
     "tech": [ "Next.js", "Tailwind", "Node.js", "Express", "MySQL", "JWT", "Socket.io" ],
     "image": "/assets/lt.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/LocalTaste",
-    "live": "https://..."
+    "live": "https://local-taste.vercel.app/"
   },
   {
     "title": "RollForge",
@@ -24,7 +24,7 @@
     "tech": [ "React", "Vite", "TypeScript", "Node.js", "Express", "MySQL", "JWT", "Vitest" ],
     "image": "/assets/rf.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/RollForge",
-    "live": "https://..."
+    "live": "https://rollforge.vercel.app/"
   },
   {
     "title": "Perfil web de Recepcionista",
@@ -42,7 +42,7 @@
     "tech": [ "Next.js", "Tailwind", "i18n", "JavaScript", "Gsap", "Email.js" ],
     "image": "/assets/kf.png",
     "code": "https://github.com/Riesaldev/Kr-kskogens-F-rskola",
-    "live": "https://..."
+    "live": "https://krakskogens.vercel.app/en"
   },
   {
     "title": "Mi primer Portfolio",
@@ -60,7 +60,7 @@
     "tech": [ "Vite", "TypeScript", "Tailwind", "MySQL", "React", "Bootstrap" ],
     "image": "/assets/mx.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/MinX",
-    "live": "https://..."
+    "live": "https://minx-tawny.vercel.app"
   },
   {
     "title": "Mi Portfolio 2026",

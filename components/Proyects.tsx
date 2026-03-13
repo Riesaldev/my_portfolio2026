@@ -24,9 +24,9 @@ export default function Proyects() {
       gsap.fromTo(
   wrapper,
   {
-    y: 500, 
-    scale: 0.9,
-    opacity: 0,
+    y: 5000, 
+    scale: 0.8,
+    opacity: 1,
     zIndex: 5,
   },
   {
@@ -53,16 +53,9 @@ export default function Proyects() {
   const aboutRefOutro = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
   return (
     <section id="projects" className="relative w-screen bg-black">
-
-      {/* Título */}
-      <h1 className="text-4xl font-bold text-primary flex items-center justify-center py-16">
-        Projects
-      </h1>
-
-      {/* Intro narrativa */}
       <section
       ref={aboutRefIntro}
-      className="flex items-center justify-center pt-16">
+      className="flex items-center justify-center px-16 my-18 mt-22 w-1/2 mx-auto">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
           <span className="font-playfair text-[#f5f5f5]">— Muy bien, Ricardo —</span><br />
           dice el entrevistador mientras gira la pantalla hacia ti.<br />
@@ -72,11 +65,8 @@ export default function Proyects() {
           <span className="font-playfair text-[#f5f5f5]"> — Estos son algunos de mis proyectos.</span>
         </p>
       </section>
-
-      {/* ESCENA STICKY */}
       <section ref={containerRef} className="relative h-[500vh] w-full">
         <div className="sticky -top-12 h-screen flex items-center justify-center">
-          {/* Contenedor de las cards */}
           <div className="relative w-full max-w-5xl h-125">
             {Projects.map((p, i) => (
               <div
@@ -100,10 +90,9 @@ export default function Proyects() {
           </div>
         </div>
       </section>
-      {/* Outro narrativa */}
       <section 
       ref={aboutRefOutro}
-      className="flex items-center justify-center px-16 my-18 mt-22 w-1/2 mx-auto">
+      className="flex items-center justify-center px-16 my-18 mt-22 w-1/3 mx-auto">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
           El entrevistador sonríe, satisfecho.<br/> 
           <span className="font-playfair text-[#f5f5f5]">— Veo que tienes variedad, pero también coherencia. Te importa la experiencia, el detalle y la funcionalidad.</span><br />
@@ -111,7 +100,6 @@ export default function Proyects() {
           <span className="font-playfair text-[#f5f5f5]">— Para mí, cada proyecto es una oportunidad de aprender algo nuevo y de crear algo que realmente funcione para alguien.</span>
         </p>
       </section>
-
     </section>
   );
 }

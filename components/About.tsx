@@ -7,12 +7,8 @@ export default function About() {
 
   return (
     <section id="about" className="min-h-screen w-screen h-auto relative mt-8 bg-black p-8">
-      <h1 className="text-4xl font-bold text-primary flex items-center justify-center">
-        About Me
-      </h1>
-
       <main className="w-full grid grid-cols-2 gap-8 px-16 py-12">
-        <section className="flex flex-col gap-6 ">
+        <section className="flex flex-col gap-6 px-14 items-center justify-center z-10">
           <p
             ref={aboutRef}
             className="font-bold tracking-wide font-mono text-[#9ca3af]"

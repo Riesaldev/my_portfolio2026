@@ -25,7 +25,20 @@ export default function Hero() {
       });
     });
 
-    return () => ctx.revert();
+    const onScroll = () => {
+      if (window.scrollY === 0 && maskRef.current) {
+        gsap.set(maskRef.current, { scale: 1 });
+        ScrollTrigger.refresh();
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", ScrollTrigger.refresh);
+
+    return () => {
+      ctx.revert();
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", ScrollTrigger.refresh);
+    };
   }, []);
 
   return (
@@ -46,7 +59,6 @@ export default function Hero() {
         <h1 className="text-9xl font-bold tracking-wide font-playfair text-black relative right-3">
           RIESAL
         </h1>
-        {/* Icono de scroll aquí */}
         <div className="absolute bottom-1/4 flex flex-col items-center opacity-80 animate-bounce pointer-events-none select-none">
           <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
             <path d="M12 16V4M12 16l-6-6M12 16l6-6" stroke="#222" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>

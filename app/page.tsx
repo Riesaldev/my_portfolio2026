@@ -10,7 +10,7 @@ export default function Home() {
     <section className="min-h-screen">
       <Hero />
       <section className="relative">
-        <Header className="sticky top-0 z-30" />
+        <Header />
         <div className="flex flex-col">
           <About />
           <Exp />

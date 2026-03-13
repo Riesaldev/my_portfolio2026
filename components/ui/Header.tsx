@@ -36,7 +36,7 @@ export default function Header() {
     setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      el.scrollIntoView({ behavior: "auto", block: "start" });
     }
   };
 
