@@ -30,6 +30,7 @@ const ContactForm = () => {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
+          to: process.env.NEXT_PUBLIC_EMAILJS_TO_EMAIL!,
           name: form.name,
           email: form.email,
           subject: form.subject,
