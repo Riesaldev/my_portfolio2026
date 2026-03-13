@@ -8,7 +8,7 @@ export default function Exp() {
 
   return (
     <section className="min-h-screen w-screen h-auto relative p-8 bg-background" id="experience">
-      <main className="w-full grid grid-cols-2 gap-8 px-12 py-12">
+      <main className="w-full grid md:grid-cols-2 grid-cols-1 gap-8 px-12 py-12">
         <section className="flex items-start justify-center z-10">
           <div className="w-full h-auto flex justify-center">
             <IconGlobe />
