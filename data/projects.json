@@ -6,7 +6,7 @@
     "tech": [ "TypeScript", "Next.js", "Tailwind", "Next.js", "Framer Motion", "MySQL", "Socket.io" ],
     "image": "/assets/bl.png",
     "code": "https://github.com/Riesaldev/TopProjects/tree/main/Blurry",
-    "live": "https://blurry-six.vercel.app/"
+    "live": "https://blurrysite.vercel.app/"
   },
   {
     "title": "LocalTaste",
@@ -48,7 +48,7 @@
     "title": "Mi primer Portfolio",
     "description": "Proyecto de aprendizaje donde experimenté con diferentes tecnologías y estilos. Fue un espacio para mostrar mis proyectos iniciales y aprender a estructurar una web personal utilizando videos, pistas de musica, animaciones, transiciones y otros elementos interactivos.",
     "status": "Finalizado",
-    "tech": [ "Next.js", "Tailwind", "JavaScript", "Web Audio", "Three.js", "Gsap", "Blender", "i18n" ],
+    "tech": [ "Next.js", "Tailwind", "i18n", "Gsap", "Blender", "Web Audio", "Three.js" ],
     "image": "/assets/m24.png",
     "code": "https://github.com/Riesaldev/my_portfolio",
     "live": "https://Riesaldev.vercel.app"

@@ -39,12 +39,12 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
         style={style} 
         className={cn(
           "relative w-full h-full rounded-xl overflow-hidden will-change-transform",
-          "bg-card border-3 border-[#00e0ff]/30 shadow-xl flex",
+          "bg-card border-3 border-[#007483] shadow-xl flex py-4",
           className
         )}
       >
         {/* Número */}
-        <div className="absolute top-4 left-4 z-20 px-4 py-2 rounded-full bg-[#00e0ff]/30 border-2 border-white/50 text-white font-mono">
+        <div className="absolute top-4 left-4 z-20 px-4 py-2 rounded-full bg-[#007483] border-2 border-white/50 text-white font-mono">
           Project {index + 1}
         </div>
 
@@ -62,22 +62,20 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
         </div>
 
         {/* Contenido */}
-        <div className="w-1/3 h-full p-6 flex flex-col justify-between">
-          <div className="border-b-2 border-[#00e0ff]/30 py-2 h-full flex flex-col justify-between">
-            <h3 className="md:text-4xl text-2xl text-primary font-bold text-center mb-4">
+        <div className="w-1/3 h-full  flex flex-col justify-around">
+          <div className="border-b-2 border-[#00e0ff]/30 py-2 h-full flex flex-col justify-around gap-4 px-4">
+            <h3 className="md:text-4xl text-2xl text-primary font-bold text-center">
               {title}
             </h3>
-
-            <p className="text-neutral-400 mb-4 leading-relaxed md:text-base text-sm">
+            <p className="text-neutral-400  leading-relaxed md:text-base text-sm">
               {description}
             </p>
-
             {tech.length > 0 && (
               <div className="flex flex-wrap gap-2 justify-end">
                 {tech.map((t, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 text-xs md:text-sm hidden rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700"
+                    className="px-2 py-1 text-xs md:text-sm rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700"
                   >
                     {t}
                   </span>

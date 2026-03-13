@@ -6,18 +6,18 @@ export default function About() {
   const aboutRef = useAnimateText({ delay: 0.5, duration: 0.3, stagger: 0.002 });
 
   return (
-    <section id="about" className="min-h-screen w-screen h-auto relative mt-8 bg-black p-8">
-      <main className="w-full grid grid-cols-2 gap-8 px-16 py-12">
-        <section className="flex flex-col gap-6 px-14 items-center justify-center z-10">
+    <section id="about" className="min-h-screen h-auto relative mt-8 bg-black p-8 overflow-x-visible w-full">
+      <main className="w-full grid md:grid-cols-2 grid-cols-1 gap-8 px-4 md:px-16 py-12">
+        <section className="flex flex-col gap-6 items-center justify-center z-10 w-full">
           <p
             ref={aboutRef}
-            className="font-bold tracking-wide font-mono text-[#9ca3af]"
+            className="font-bold tracking-wide font-mono text-[#9ca3af] w-full whitespace-pre-line"
           >
             Knock knock.<br/>
             <span className="font-playfair text-[#f5f5f5]">— Adelante —</span><br/>
             responde una voz tranquila desde dentro.<br/>
             Abro la puerta.<br/>
-            La sala es luminosa, moderna, con una mesa de madera clara y una pantalla apagada al fondo. Camino con paso firme, aunque siento esa chispa de adrenalina que siempre aparece antes de algo importante.<br/>
+            La sala es luminosa, moderna, con una mesa de madera clara y una pantalla apagada al fondo.Camino con paso firme, aunque siento esa chispa de adrenalina que siempre aparece antes de algo importante.<br/>
             <span className="font-playfair text-[#f5f5f5]">
               — Buenos días —
             </span><br/>
@@ -29,7 +29,7 @@ export default function About() {
             —<span className="font-playfair text-[#f5f5f5]">Encantado, Ricardo. Empecemos por lo esencial. ¿Quién eres como desarrollador?</span><br/>
             Respiro un segundo. Me gusta empezar por lo que realmente importa.<br/>
             —<span className="font-playfair text-[#f5f5f5]">
-              Soy alguien que disfruta construir experiencias modernas que sorprendan y que sean intuitivas. <span className="text-primary text-xl">Me apasiona mezclar lógica con diseño, precisión con creatividad. Me encanta aprender tecnologías nuevas y aplicarlas para resolver problemas reales de forma elegante y eficiente</span>.
+              Soy alguien que disfruta construir experiencias modernas que sorprendan y que sean intuitivas.<br/> <span className="text-primary text-xl">Me apasiona mezclar lógica con diseño, precisión con creatividad. Me encanta aprender tecnologías nuevas y aplicarlas para resolver problemas reales de forma elegante y eficiente</span>.
             </span><br/>
             El entrevistador asiente, interesado.<br/>
             — <span className="font-playfair text-[#f5f5f5]">¿Y qué te motiva?</span>—<br/>

@@ -29,13 +29,16 @@ export function useAnimateText(options?: {
     }
 
     textNodes.forEach((node) => {
-      const chars = node.textContent!.split("");
+      // Dividir el texto en palabras y mantener los espacios
+      const words = node.textContent!.split(/(\s+)/);
 
       const wrapper = document.createElement("span");
-      wrapper.innerHTML = chars
+      wrapper.innerHTML = words
         .map(
-          (c) =>
-            `<span class="inline-block opacity-0 translate-y-3">${c === " " ? "&nbsp;" : c}</span>`
+          (w) =>
+            w.trim() === ""
+              ? w.replace(/ /g, "&nbsp;")
+                : `<span class="inline-block opacity-0 translate-y-3">${w}</span>`
         )
         .join("");
 
