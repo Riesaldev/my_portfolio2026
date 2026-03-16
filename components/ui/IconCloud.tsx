@@ -70,7 +70,7 @@ export default function IconCloud({ iconSlugs = [], imageArray }) {
   }, [icons, theme]);
 
   return (
-    <Cloud {...cloudProps}>
+    <Cloud label="Icon Cloud" {...cloudProps}>
       <>
         {renderedIcons}
 

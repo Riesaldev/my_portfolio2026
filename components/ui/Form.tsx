@@ -51,15 +51,17 @@ const ContactForm = () => {
 
   return (
     <form
+      label="Contact form"
       onSubmit={sendEmail}
       className="w-full max-w-2xl mx-auto flex flex-col gap-6 text-white"
     >
       <div className="flex flex-col gap-2">
-        <label className="font-semibold">Nombre</label>
+        <label className="font-semibold">Name</label>
         <input
+          label="Name"
           type="text"
           name="name"
-          placeholder="Tu nombre"
+          placeholder="Your name"
           value={form.name}
           onChange={handleChange}
           className="glass-input px-4 py-3"
@@ -70,9 +72,10 @@ const ContactForm = () => {
       <div className="flex flex-col gap-2">
         <label className="font-semibold">Email</label>
         <input
+          label="Email"
           type="email"
           name="email"
-          placeholder="tu@email.com"
+          placeholder="your@email.com"
           value={form.email}
           onChange={handleChange}
           className="glass-input px-4 py-3"
@@ -81,11 +84,12 @@ const ContactForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="font-semibold">Asunto</label>
+        <label className="font-semibold">Subject</label>
         <input
+          label="Subject"
           type="text"
           name="subject"
-          placeholder="Motivo del contacto"
+          placeholder="Reason for contact"
           value={form.subject}
           onChange={handleChange}
           className="glass-input px-4 py-3"
@@ -94,11 +98,12 @@ const ContactForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="font-semibold">Empresa</label>
+        <label className="font-semibold">Company</label>
         <input
+          label="Company"
           type="text"
           name="company"
-          placeholder="Nombre de la empresa"
+          placeholder="Company name (optional)"
           value={form.company}
           onChange={handleChange}
           className="glass-input px-4 py-3"
@@ -106,10 +111,11 @@ const ContactForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="font-semibold">Descripción</label>
+        <label className="font-semibold">Description</label>
         <textarea
+          label="Description"
           name="message"
-          placeholder="Cuéntame sobre tu proyecto o consulta"
+          placeholder="Tell me about your project or inquiry"
           value={form.message}
           onChange={handleChange}
           className="glass-textarea px-4 py-3 h-32 resize-none"
@@ -122,12 +128,12 @@ const ContactForm = () => {
         size="md"
         className="mt-4"
       >
-        {loading ? "Enviando..." : "Enviar mensaje"}
+        {loading ? "Sending..." : "Send Message"}
       </GlassButton>
 
       {sent && (
         <p className="text-secondary text-center mt-4">
-          ¡Gracias! Tu mensaje ha sido enviado correctamente.
+          Thank you! Your message has been sent successfully.
         </p>
       )}
       <SocialIcons />

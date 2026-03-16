@@ -6,7 +6,7 @@ export default function About() {
   const aboutRef = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008 });
 
   return (
-    <section id="about" className="min-h-screen h-auto relative mt-8 bg-black p-8 overflow-x-visible w-full">
+    <section label="About Section" id="about" className="min-h-screen h-auto relative mt-8 bg-black p-8 overflow-x-visible w-full">
       <main className="w-full grid md:grid-cols-2 grid-cols-1 gap-8 px-4 md:px-16 py-12">
         <section className="flex flex-col gap-6 items-center justify-center z-10 w-full">
           <p
@@ -14,39 +14,39 @@ export default function About() {
             className="font-bold tracking-wide font-mono text-[#9ca3af] w-full whitespace-pre-line"
           >
             Knock knock.<br/>
-            <span className="font-playfair text-[#f5f5f5]">— Adelante</span><br/>
-            responde una voz tranquila desde dentro.<br/>
-            Abro la puerta.<br/>
-            La sala es luminosa, moderna, con una mesa de madera clara y una pantalla apagada al fondo.Camino con paso firme, aunque siento esa chispa de adrenalina que siempre aparece antes de algo importante.<br/>
-            <span className="font-playfair text-[#f5f5f5]">
-              — Buenos días.
+            <span className="font-playfair text-[#f5f5f5] text-lg">— Come in</span><br/>
+            a calm voice answers from inside.<br/>
+            I open the door.<br/>
+            The room is bright and modern, with a light wood table and a dark screen in the background. I walk in with a steady pace, though I feel that spark of adrenaline that always appears before something important.<br/>
+            <span className="font-playfair text-[#f5f5f5] text-lg">
+              — Good morning.
             </span><br/>
-            digo con una sonrisa.<br/>
-            <span className="font-playfair text-[#f5f5f5]">
-              — Mi nombre es <span className="text-primary text-xl">Ricardo Estupiñán Alonso</span>. Vengo a postular al puesto de <span className="text-primary text-xl">Full‑Stack Developer.</span>
+            I say with a smile.<br/>
+            <span className="font-playfair text-[#f5f5f5] text-lg">
+              — My name is <span className="text-secondary text-lg">Ricardo Estupiñán Alonso</span>. I´m here to apply for the <span className="text-secondary text-lg">Full‑Stack Developer</span> position.
             </span><br/>
-            El entrevistador me invita a sentarme. Sus gestos son amables, profesionales.<br/>
-            —<span className="font-playfair text-[#f5f5f5]">Encantado, Ricardo. Empecemos por lo esencial. ¿Quién eres como desarrollador?</span><br/>
-            Respiro un segundo. Me gusta empezar por lo que realmente importa.<br/>
-            —<span className="font-playfair text-[#f5f5f5]">
-              Soy alguien que disfruta construir experiencias modernas que sorprendan y que sean intuitivas.<br/> <span className="text-primary text-xl">Me apasiona mezclar lógica con diseño, precisión con creatividad. Me encanta aprender tecnologías nuevas y aplicarlas para resolver problemas reales de forma elegante y eficiente.</span>
+            The interviewer invites me to sit down. Their gestures are kind and professional.<br/>
+            —<span className="font-playfair text-[#f5f5f5] text-lg">Nice to meet you, Ricardo. Let´s start with the essentials. Who are you as a developer?</span><br/>
+            I take a breath for a second. I like to start with what really matters.<br/>
+            —<span className="font-playfair text-[#f5f5f5] text-lg">
+              I am someone who enjoys building modern experiences that are both surprising and intuitive.<br/> <span className="text-secondary text-lg">I am passionate about mixing logic with design, precision with creativity. I love learning new technologies and applying them to solve real-world problems in an elegant and efficient way.</span>
             </span><br/>
-            El entrevistador asiente, interesado.<br/>
-            — <span className="font-playfair text-[#f5f5f5]">¿Y qué te motiva?</span><br/>
-            —<span className="font-playfair text-[#f5f5f5]">
-              La sensación de ver algo cobrar vida. De tomar una idea, un concepto, un problema… y convertirlo en una solución funcional, clara y bonita. <span className="text-primary text-xl">Me gusta que las cosas funcionen, pero también que emocionen.</span>
+            The interviewer nods, interested.<br/>
+            — <span className="font-playfair text-[#f5f5f5] text-lg">And what motivates you?</span><br/>
+            —<span className="font-playfair text-[#f5f5f5] text-lg">
+              The feeling of seeing something come to life. Taking an idea, a concept, a problem... and turning it into a functional, clear, and beautiful solution. <span className="text-secondary text-lg">I like things to work, but also to evoke emotion.</span>
             </span><br/>
-            — <span className="font-playfair text-[#f5f5f5]">Suena a que disfrutas el proceso.</span><br/>
-            — <span className="font-playfair text-[#f5f5f5]">
-              Si, muchísimo. Llevo dos años desarrollando por cuenta propia, construyendo proyectos completos, desde el diseño hasta el despliegue. Trabajo con React, Next, Astro, Node, Express, animaciones con GSAP, y últimamente estoy explorando experiencias más fluidas y accesibles. Mi objetivo es siempre el mismo; crear algo que valga la pena.
+            — <span className="font-playfair text-[#f5f5f5] text-lg">It sounds like you enjoy the process.</span><br/>
+            — <span className="font-playfair text-[#f5f5f5] text-lg">
+              Yes, very much. I´ve been developing independently for two years, building complete projects from design to deployment. I work with React, Next, Astro, Node, Express, animations with GSAP, and lately, I´ve been exploring more fluid and accessible experiences. My goal is always the same: to create something worth it.
             </span><br/>
-            El entrevistador sonríe.<br/>
-            — <span className="font-playfair text-[#f5f5f5]">Perfecto. Entonces pasemos a tu experiencia.</span>
+            The interviewer smiles.<br/>
+            — <span className="font-playfair text-[#f5f5f5] text-lg">Perfect. Then let´s move on to your experience.</span>
           </p>
         </section>
 
-        <section className="flex items-center justify-center z-10">
-          <div className="w-full h-auto flex justify-center bg-[url('/assets/back.png')] bg-cover rounded-2xl">
+        <section label="Aside Section" className="flex items-center justify-center z-10">
+          <div label="Lanyard" className="w-full h-auto flex justify-center bg-[url('/assets/back.png')] bg-cover rounded-2xl">
             <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
           </div>
         </section>

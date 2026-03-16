@@ -1,7 +1,7 @@
 [
   {
     "title": "Blurry",
-    "description": "App web de citas basada en la idea de 'desenfocar' la apariencia física para fomentar conexiones más auténticas. Los usuarios crean perfiles con fotos borrosas y se centran en intereses y personalidad. El diseño es moderno, con animaciones suaves y una interfaz intuitiva.",
+    "description": "Dating web app based on the idea of 'blurring' physical appearance to foster more authentic connections. Users create profiles with blurred photos and focus on interests and personality. The design is modern, with smooth animations and an intuitive interface.",
     "status": "MVP",
     "tech": [ "TypeScript", "Next.js", "Tailwind", "Next.js", "Framer Motion", "MySQL", "Socket.io" ],
     "image": "/assets/bl.png",
@@ -10,7 +10,7 @@
   },
   {
     "title": "LocalTaste",
-    "description": "Una plataforma para comprar productos locales directamente a productores, sin intermediarios. El usuario puede crear cestas personalizadas, explorar productos frescos y apoyar comercios locales.",
+    "description": "A platform to buy local products directly from producers, without intermediaries. Users can create personalized baskets, explore fresh products, and support local businesses.",
     "status": "MVP",
     "tech": [ "Next.js", "Tailwind", "Node.js", "Express", "MySQL", "JWT", "Socket.io" ],
     "image": "/assets/lt.png",
@@ -19,7 +19,7 @@
   },
   {
     "title": "RollForge",
-    "description": "Esta idea nació de mi amor por los juegos de rol y la necesidad de una plataforma para gestionar partidas de manera eficiente. Quería crear un espacio donde jugadores y directores de juego pudieran gestionar partidas, personajes y campañas de forma intuitiva y personalizada.",
+    "description": "This idea was born from my love for role-playing games and the need for a platform to manage games efficiently. I wanted to create a space where players and game masters could manage games, characters, and campaigns intuitively and personally.",
     "status": "MVP",
     "tech": [ "React", "Vite", "TypeScript", "Node.js", "Express", "MySQL", "JWT", "Vitest" ],
     "image": "/assets/rf.png",
@@ -27,9 +27,9 @@
     "live": "https://rollforge.vercel.app/"
   },
   {
-    "title": "Perfil web de Recepcionista",
-    "description": "Este trabajo fue un proyecto personal para crear un perfil web que destacara las habilidades y experiencia de una recepcionista. El diseño se centró en la claridad y la profesionalidad, con secciones  y formulario de contacto.",
-    "status": "Finalizado",
+    "title": "Receptionist Web Profile",
+    "description": "This work was a personal project to create a web profile highlighting the skills and experience of a receptionist. The design focused on clarity and professionalism, with sections and a contact form.",
+    "status": "Finished",
     "tech": [ "Astro", "Tailwind", "JavaScript", "Gsap", "Email.js", "Matter.js" ],
     "image": "/assets/p26.png",
     "code": "https://github.com/Riesaldev/portfolio2026",
@@ -37,17 +37,17 @@
   },
   {
     "title": "Krakskogens Förskola",
-    "description": "Este sitio web fue creado para una guardería en Suecia, con el objetivo de proporcionar información clara y atractiva para los padres. El diseño es sencillo y amigable, con secciones para mostrar las actividades diarias, el equipo de trabajo y un formulario de contacto.",
-    "status": "Finalizado",
+    "description": "This website was created for a daycare in Sweden, with the goal of providing clear and attractive information for parents. The design is simple and friendly, with sections to show daily activities, the work team, and a contact form.",
+    "status": "Finished",
     "tech": [ "Next.js", "Tailwind", "i18n", "JavaScript", "Gsap", "Email.js" ],
     "image": "/assets/kf.png",
     "code": "https://github.com/Riesaldev/Kr-kskogens-F-rskola",
     "live": "https://krakskogens.vercel.app/en"
   },
   {
-    "title": "Mi primer Portfolio",
-    "description": "Proyecto de aprendizaje donde experimenté con diferentes tecnologías y estilos. Fue un espacio para mostrar mis proyectos iniciales y aprender a estructurar una web personal utilizando videos, pistas de musica, animaciones, transiciones y otros elementos interactivos.",
-    "status": "Finalizado",
+    "title": "My First Portfolio",
+    "description": "Learning project where I experimented with different technologies and styles. It was a space to showcase my initial projects and learn how to structure a personal website using videos, music tracks, animations, transitions, and other interactive elements.",
+    "status": "Finished",
     "tech": [ "Next.js", "Tailwind", "i18n", "Gsap", "Blender", "Web Audio", "Three.js" ],
     "image": "/assets/m24.png",
     "code": "https://github.com/Riesaldev/my_portfolio",
@@ -55,7 +55,7 @@
   },
   {
     "title": "MinX",
-    "description": "Esta es una version simplificada de X (anteriormente Twitter) que desarrollé para practicar mis habilidades en React y Tailwind. La aplicación permite a los usuarios crear publicaciones, seguir a otros usuarios y ver un feed de noticias. El diseño es moderno y minimalista con animaciones suaves .",
+    "description": "This is a simplified version of X (formerly Twitter) that I developed to practice my skills in React and Tailwind. The application allows users to create posts, follow other users, and see a news feed. The design is modern and minimalist with smooth animations.",
     "status": "MVP",
     "tech": [ "Vite", "TypeScript", "Tailwind", "MySQL", "React", "Bootstrap" ],
     "image": "/assets/mx.png",
@@ -63,9 +63,9 @@
     "live": "https://minx-tawny.vercel.app"
   },
   {
-    "title": "Mi Portfolio 2026",
-    "description": "Por ultimo, este proyecto es una evolución de mis anteriores portfolios, donde he aplicado todo lo aprendido para crear una web personal que refleje mi crecimiento como desarrollador. El diseño es moderno y profesional con secciones diferenciadas.",
-    "status": "Finalizado",
+    "title": "My Portfolio 2026",
+    "description": "Finally, this project is an evolution of my previous portfolios, where I have applied everything I've learned to create a personal website that reflects my growth as a developer. The design is modern and professional with distinct sections.",
+    "status": "Finished",
     "tech": [ "Next.js", "Tailwind", "TypeScript", "Gsap", "Three.js", "Email.js", "i18n" ],
     "image": "/assets/m26.png",
     "code": "https://github.com/Riesaldev/my_portfolio2026",

@@ -52,22 +52,23 @@ export default function Proyects() {
   const aboutRefIntro = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
   const aboutRefOutro = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
   return (
-    <section id="projects" className="relative w-screen bg-black">
+    <section label="Projects Section"id="projects" className="relative w-screen bg-black">
       <section
+      label="Intro Section"
       ref={aboutRefIntro}
       className="flex items-center justify-center px-16 my-18 mt-22 w-1/2 mx-auto">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
-          <span className="font-playfair text-[#f5f5f5]">— Muy bien, Ricardo</span><br />
-          dice el entrevistador mientras gira la pantalla hacia ti.<br />
-          <span className="font-playfair text-[#f5f5f5]">— Me gustaría ver algunos de tus proyectos.</span><br />
-          Sonrío. Este es el momento donde mis ideas toman forma.<br />
-          <span className="font-playfair text-[#f5f5f5]">— Claro —</span> respondo.
-          <span className="font-playfair text-[#f5f5f5]"> — Estos son algunos de mis proyectos.</span>
+          <span className="font-playfair text-[#f5f5f5] text-lg">— Very well, Ricardo,</span><br />
+          the interviewer says while turning the screen towards you.<br />
+          <span className="font-playfair text-[#f5f5f5] text-lg">— I´d like to see some of your projects.</span><br />
+          I smile. This is the moment where my ideas take shape.<br />
+          <span className="font-playfair text-[#f5f5f5] text-lg">— Of course —</span> I reply.
+          <span className="font-playfair text-[#f5f5f5] text-lg"> — These are some of my projects.</span>
         </p>
       </section>
-      <section ref={containerRef} className="relative h-[500vh] w-full">
+      <section label="Projects" ref={containerRef} className="relative h-[500vh] w-full">
         <div className="sticky -top-12 h-screen flex items-center justify-center">
-          <div className="relative w-full max-w-5xl h-125">
+          <div label="Projects Wrapper" className="relative w-full max-w-5xl h-125">
             {Projects.map((p, i) => (
               <div
                 key={i}
@@ -76,6 +77,7 @@ export default function Proyects() {
                 style={{ zIndex: i + 1 }}
               >
                 <ProjectCard
+                  label={`Project ${i + 1}`}
                   index={i}
                   title={p.title}
                   description={p.description}
@@ -90,14 +92,15 @@ export default function Proyects() {
           </div>
         </div>
       </section>
-      <section 
+      <section
+      label="Outro Section"
       ref={aboutRefOutro}
       className="flex items-center justify-center px-16 my-18 mt-22 w-1/3 mx-auto">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
-          El entrevistador sonríe, satisfecho.<br/> 
-          <span className="font-playfair text-[#f5f5f5]">— Veo que tienes variedad, pero también coherencia. Te importa la experiencia, el detalle y la funcionalidad.</span><br />
-          <span className="font-playfair text-[#f5f5f5]">—Sí, mucho.—</span> respondo. 
-          <span className="font-playfair text-[#f5f5f5]">— Para mí, cada proyecto es una oportunidad de aprender algo nuevo y de crear algo que realmente funcione para alguien.</span>
+          The interviewer smiles, satisfied.<br/> 
+          <span className="font-playfair text-[#f5f5f5] text-lg">— I see you have variety, but also coherence. You care about experience, detail, and functionality.</span><br />
+          <span className="font-playfair text-[#f5f5f5] text-lg">— Yes, very much —</span> I reply. 
+          <span className="font-playfair text-[#f5f5f5] text-lg">— For me, every project is an opportunity to learn something new and to create something that truly works for someone.</span>
         </p>
       </section>
     </section>

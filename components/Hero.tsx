@@ -42,8 +42,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" ref={containerRef} className="min-h-screen w-screen h-auto relative overflow-hidden">
+    <section label="Home Section" id="home" ref={containerRef} className="min-h-screen w-screen h-auto relative overflow-hidden">
       <video
+        label="Video"
         src="/invideo.mp4"
         className="fixed inset-0 w-full h-full object-cover -z-10 scale-140 top-12"
         autoPlay
@@ -52,6 +53,7 @@ export default function Hero() {
         loads="eager"
       />
       <div
+        label="Mask"
         ref={maskRef}
         className="relative z-10 h-screen w-full flex flex-col items-center justify-center bg-white"
         style={{ mixBlendMode: "screen", willChange: "transform" }}
@@ -59,7 +61,7 @@ export default function Hero() {
         <h1 className="text-9xl font-bold tracking-wide font-playfair text-black relative right-3">
           RIESAL
         </h1>
-        <div className="absolute bottom-1/4 flex flex-col items-center opacity-80 animate-bounce pointer-events-none select-none">
+        <div label="Scroll" className="absolute bottom-1/4 flex flex-col items-center opacity-80 animate-bounce pointer-events-none select-none">
           <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
             <path d="M12 16V4M12 16l-6-6M12 16l6-6" stroke="#222" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>

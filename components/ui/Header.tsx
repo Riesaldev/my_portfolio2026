@@ -41,14 +41,15 @@ export default function Header() {
   };
 
   return (
-    <header className="flex w-full py-6 px-6 md:px-16 items-center justify-between sticky top-0 z-30 bg-transparent backdrop-blur-sm rounded-2xl">
-      <h1 className="text-2xl font-bold tracking-wide font-playfair text-white">
+    <header label="Header" className="flex w-full py-6 px-6 md:px-16 items-center justify-between sticky top-0 z-30 bg-transparent backdrop-blur-sm rounded-2xl">
+      <h1 label="Logo" className="text-2xl font-bold tracking-wide font-playfair text-white">
         RIESAL
       </h1>
       {/* Desktop nav */}
       <nav className="hidden md:flex items-center gap-8">
         {sections.map((section) => (
           <button
+            label={section.label}
             key={section.id}
             onClick={() => handleNavClick(section.id)}
             className={`text-lg transition-colors duration-300 font-semibold px-2 py-1 rounded-lg ${
@@ -63,6 +64,7 @@ export default function Header() {
       </nav>
       {/* Mobile menu button */}
       <button
+        label="Menu"
         className="md:hidden flex flex-col justify-center items-center w-10 h-10 z-40"
         onClick={() => setMenuOpen((v) => !v)}
         aria-label="Abrir menú"
@@ -91,6 +93,7 @@ export default function Header() {
       >
         {sections.map((section) => (
           <button
+            label={section.label}
             key={section.id}
             onClick={() => handleNavClick(section.id)}
             className={`text-2xl font-bold px-4 py-2 rounded-lg transition-colors duration-300 ${

@@ -32,6 +32,8 @@ const GlassButton: React.FC<GlassButtonProps> = ({
 }) => {
   return (
     <button
+      type="button"
+      aria-label="Glass button"
       className={`
         group relative overflow-hidden rounded-2xl font-semibold text-white
         backdrop-blur-xl border shadow-[0_0_15px_var(--tw-shadow-color)]
