@@ -4,6 +4,7 @@ import Header from "@/components/ui/Header";
 import Exp from "@/components/Exp";
 import Proyects from "@/components/Proyects";
 import Contact from "@/components/Contact";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Contact />
         </div>
       </section>
+      <Footer />
     </section>
   );
 }

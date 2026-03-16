@@ -6,12 +6,12 @@ export default function About() {
   const aboutRef = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008 });
 
   return (
-    <section label="About Section" id="about" className="min-h-screen h-auto relative mt-8 bg-black p-8 overflow-x-visible w-full">
-      <main className="w-full grid md:grid-cols-2 grid-cols-1 gap-8 px-4 md:px-16 py-12">
+    <section label="About Section" id="about" className="min-h-screen h-auto relative bg-black p-4 md:p-8 overflow-hidden w-full">
+      <main className="w-full grid lg:grid-cols-2 grid-cols-1 gap-8 px-4 md:px-16 py-12">
         <section className="flex flex-col gap-6 items-center justify-center z-10 w-full">
           <p
             ref={aboutRef}
-            className="font-bold tracking-wide font-mono text-[#9ca3af] w-full whitespace-pre-line"
+            className="font-bold tracking-wide font-mono text-[#9ca3af] w-full whitespace-pre-line text-sm md:text-base"
           >
             Knock knock.<br/>
             <span className="font-playfair text-[#f5f5f5] text-lg">— Come in</span><br/>
@@ -45,8 +45,8 @@ export default function About() {
           </p>
         </section>
 
-        <section label="Aside Section" className="flex items-center justify-center z-10">
-          <div label="Lanyard" className="w-full h-auto flex justify-center bg-[url('/assets/back.png')] bg-cover rounded-2xl">
+        <section label="Aside Section" className="flex items-center justify-center z-10 min-h-100 md:min-h-150">
+          <div label="Lanyard" className="w-full h-full flex justify-center bg-[url('/assets/back.png')] bg-cover rounded-2xl overflow-hidden">
             <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
           </div>
         </section>

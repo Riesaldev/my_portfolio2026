@@ -68,7 +68,7 @@ export default function Proyects() {
       </section>
       <section label="Projects" ref={containerRef} className="relative h-[500vh] w-full">
         <div className="sticky -top-12 h-screen flex items-center justify-center">
-          <div label="Projects Wrapper" className="relative w-full max-w-5xl h-125">
+          <div label="Projects Wrapper" className="relative w-full max-w-5xl h-125 left-7 md:left-12">
             {Projects.map((p, i) => (
               <div
                 key={i}

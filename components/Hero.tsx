@@ -46,7 +46,7 @@ export default function Hero() {
       <video
         label="Video"
         src="/invideo.mp4"
-        className="fixed inset-0 w-full h-full object-cover -z-10 scale-140 top-12"
+        className="fixed inset-0 w-full h-full object-cover -z-10 md:scale-140 top-12"
         autoPlay
         loop
         muted

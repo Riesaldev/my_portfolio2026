@@ -7,15 +7,15 @@ export default function Exp() {
   const expRef = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
 
   return (
-    <section label="Experience Section" className="min-h-screen w-screen h-auto relative p-8 bg-background" id="experience">
-      <main className="w-full grid md:grid-cols-2 grid-cols-1 gap-8 px-12 py-12">
-        <section label="Aside Section" className="flex items-start justify-center z-10">
-          <div className="w-full h-auto flex justify-center">
+    <section label="Experience Section" className="min-h-screen w-full h-auto relative bg-background overflow-hidden" id="experience">
+      <main className="w-full grid lg:grid-cols-2 grid-cols-1 gap-8 px-4 md:px-16 py-12">
+        <section label="Aside Section" className="flex items-center justify-center z-10 min-h-75 md:min-h-125">
+          <div className="w-full h-full flex justify-center items-center">
             <IconGlobe />
           </div>
         </section>
-        <section className="flex flex-col gap-6  px-14 items-center justify-center z-10">
-          <p ref={expRef} className="font-bold tracking-wide font-mono text-[#9ca3af]">
+        <section className="flex flex-col gap-6 items-center justify-center z-10 w-full">
+          <p ref={expRef} className="font-bold tracking-wide font-mono text-[#9ca3af] w-full whitespace-pre-line text-sm md:text-base">
             <span className="font-playfair text-[#f5f5f5] text-lg">— Well, Ricardo,</span>
             <br />
             the interviewer says while checking some notes.

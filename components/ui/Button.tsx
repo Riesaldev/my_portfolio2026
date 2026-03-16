@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 type Variant = "primary" | "secondary" | "gradient" | "whiteGlass";
 type Size = "sm" | "md" | "lg";
@@ -8,14 +8,15 @@ interface GlassButtonProps {
   variant?: Variant;
   size?: Size;
   className?: string;
+  onClick?: () => void;
 }
 
 const variantStyles: Record<Variant, string> = {
-  primary: "bg-[#7b5cff]/20 border-[#7b5cff]/40 shadow-[#7b5cff]/40",
-  secondary: "bg-[#00e0ff]/20 border-[#00e0ff]/40 shadow-[#00e0ff]/40",
+  primary: "bg-[#7b5cff]/10 border-[#7b5cff]/30 shadow-[#7b5cff]/20 hover:bg-[#7b5cff]/20",
+  secondary: "bg-[#00e0ff]/10 border-[#00e0ff]/30 shadow-[#00e0ff]/20 hover:bg-[#00e0ff]/20",
   gradient:
-    "bg-gradient-to-r from-[#7b5cff]/30 via-[#00e0ff]/30 to-[#ff7ce5]/30 border-white/20 shadow-white/20",
-  whiteGlass: "bg-white/10 border-white/20 shadow-white/30",
+    "bg-gradient-to-br from-[#7b5cff]/20 via-[#00e0ff]/10 to-[#ff7ce5]/20 border-white/10 shadow-white/10 hover:from-[#7b5cff]/30 hover:to-[#ff7ce5]/30",
+  whiteGlass: "bg-white/5 border-white/10 shadow-white/20",
 };
 
 const sizeStyles: Record<Size, string> = {
@@ -29,33 +30,51 @@ const GlassButton: React.FC<GlassButtonProps> = ({
   variant = "primary",
   size = "md",
   className,
+  onClick,
 }) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!buttonRef.current) return;
+    const rect = buttonRef.current.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
   return (
     <button
-      type="button"
+      ref={buttonRef}
+      onClick={onClick}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      type="submit"
       aria-label="Glass button"
-      className={`
-        group relative overflow-hidden rounded-2xl font-semibold text-white
-        backdrop-blur-xl border shadow-[0_0_15px_var(--tw-shadow-color)]
-        transition-all duration-300 active:scale-95 cursor-pointer
-        ${variantStyles[variant]}
-        ${sizeStyles[size]}
-        ${className}
-      `}
+      className={`group relative overflow-hidden rounded-2xl font-semibold text-white backdrop-blur-2xl border shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_15px_var(--tw-shadow-color)] transition-all duration-500 active:scale-95 cursor-pointer hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_25px_var(--tw-shadow-color)] hover:-translate-y-0.5 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
     >
-      {/* Shine */}
+      {/* Inner Glow/Depth */}
+      <span className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent pointer-events-none" />
+      
+      {/* Cursor Follow Shine */}
       <span
-        className="
-          absolute inset-0 w-[120%] h-full
-          bg-linear-to-r from-transparent via-white/30 to-transparent
-          opacity-0 group-hover:opacity-100
-          group-hover:animate-shine
-          pointer-events-none
-        "
+        style={{
+          left: mousePos.x,
+          top: mousePos.y,
+          transform: "translate(-50%, -50%)",
+          background: "radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%)",
+        }}
+        className={
+          `absolute w-48 h-48 transition-opacity duration-500 pointer-events-none blur-2xl ` +
+          (isHovered ? "opacity-100" : "opacity-0")
+        }
       />
 
-      {/* Pulse hover */}
-      <span className="group-hover:animate-pulse block">{children}</span>
+      {/* Content */}
+      <span className="relative z-10 block transition-transform duration-300 group-hover:scale-105">{children}</span>
     </button>
   );
 };

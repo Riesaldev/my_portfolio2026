@@ -1,16 +1,15 @@
 'use client';
 import ContactForm from "./ui/Form";
 import { useAnimateText } from '../hooks/useAnimateText';
-import Footer from "./ui/Footer";
 
 export default function Contact() {
   const aboutRef = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
 
   return (
-  <section label="Contact Section" id="contact" className="min-h-screen w-screen h-auto relative bg-background py-16">
-      <main className="w-full md:grid md:grid-cols-2 gap-8 px-16 py-24">
-        <section label="Aside Section" className="flex flex-col gap-6 px-14 items-center justify-center z-10">
-          <p ref={aboutRef} className="font-bold tracking-wide font-mono text-[#9ca3af]">
+  <section label="Contact Section" id="contact" className="min-h-screen w-full h-auto relative bg-background py-16 overflow-hidden">
+      <main className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 mb-6 md:px-16 py-12 md:py-24">
+        <section label="Aside Section" className="flex flex-col gap-6 items-center justify-center z-10 w-full">
+          <p ref={aboutRef} className="font-bold tracking-wide font-mono text-[#9ca3af] text-sm md:text-base">
             The interviewer closes their notebook with a gentle gesture. The room falls into a comfortable silence, the kind that doesn´t feel heavy, but confirms that everything has flowed well.
             <br/>
             <span className="font-playfair text-[#f5f5f5] text-lg">
@@ -42,12 +41,11 @@ export default function Contact() {
           </p>
         </section>
         <section className="flex items-center justify-center z-10">
-          <div className="w-full h-auto flex justify-center bg-[#FF7CE5]/10 backdrop-blur-2xl rounded-2xl border-2 border-[#00e0ff]/40 p-8 mt-6 md:mt-0">
+          <div className="w-full max-w-xl h-auto flex justify-center bg-[#FF7CE5]/10 backdrop-blur-2xl rounded-2xl border-2 border-[#00e0ff]/40 p-6 md:p-8 mt-6 lg:mt-0">
             <ContactForm />
           </div>
         </section>
       </main>
-      <Footer />
     </section>
   );
 }
