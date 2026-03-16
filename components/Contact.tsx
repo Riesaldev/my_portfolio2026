@@ -3,12 +3,12 @@ import ContactForm from "./ui/Form";
 import { useAnimateText } from '../hooks/useAnimateText';
 
 export default function Contact() {
-  const aboutRef = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
+  const aboutRef = useAnimateText<HTMLParagraphElement>({ delay: 0.8, duration: 0.6, stagger: 0.008  });
 
   return (
-  <section label="Contact Section" id="contact" className="min-h-screen w-full h-auto relative bg-background py-16 overflow-hidden">
+  <section id="contact" className="min-h-screen w-full h-auto relative bg-background py-16 overflow-hidden">
       <main className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 mb-6 md:px-16 py-12 md:py-24">
-        <section label="Aside Section" className="flex flex-col gap-6 items-center justify-center z-10 w-full">
+        <section className="flex flex-col gap-6 items-center justify-center z-10 w-full">
           <p ref={aboutRef} className="font-bold tracking-wide font-mono text-[#9ca3af] text-sm md:text-base">
             The interviewer closes their notebook with a gentle gesture. The room falls into a comfortable silence, the kind that doesn´t feel heavy, but confirms that everything has flowed well.
             <br/>

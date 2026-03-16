@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer label="Footer" className=" w-full overflow-hidden border-t border-white/5">
+    <footer className=" w-full overflow-hidden border-t border-white/5">
       {/* Gradient line separator */}
       <div className=" w-full h-px opacity-30" />
       
@@ -20,7 +20,7 @@ export default function Footer() {
           </p>
 
           <span className="flex items-center gap-3 bg-white/5 px-5 py-1.5 rounded-full border border-white/10 text-xs uppercase tracking-widest">
-            with <span label="Coffee" className="inline-block animate-pulse scale-200">☕</span> & <span label="Laptop" className="inline-block animate-bounce scale-200">💻</span>
+            with <span className="inline-block animate-pulse scale-200">☕</span> & <span className="inline-block animate-bounce scale-200">💻</span>
           </span>
         </div>
         <p className="text-[10px] text-[#9ca3af]/60 italic tracking-[0.3em] uppercase mt-2 select-none">Enjoy your stay!!</p>

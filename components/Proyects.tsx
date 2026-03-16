@@ -52,9 +52,8 @@ export default function Proyects() {
   const aboutRefIntro = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
   const aboutRefOutro = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
   return (
-    <section label="Projects Section"id="projects" className="relative w-screen bg-black">
+    <section id="projects" className="relative w-screen bg-black">
       <section
-      label="Intro Section"
       ref={aboutRefIntro}
       className="flex items-center justify-center px-16 my-18 mt-22 w-1/2 mx-auto">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">
@@ -66,18 +65,17 @@ export default function Proyects() {
           <span className="font-playfair text-[#f5f5f5] text-lg"> — These are some of my projects.</span>
         </p>
       </section>
-      <section label="Projects" ref={containerRef} className="relative h-[500vh] w-full">
+      <section ref={containerRef} className="relative h-[500vh] w-full">
         <div className="sticky -top-12 h-screen flex items-center justify-center">
-          <div label="Projects Wrapper" className="relative w-full max-w-5xl h-125 left-7 md:left-12">
+          <div className="relative w-full max-w-5xl h-125 left-7 md:left-12">
             {Projects.map((p, i) => (
               <div
                 key={i}
-                ref={(el) => (wrappersRef.current[i] = el!)}
+                ref={(el) => { wrappersRef.current[i] = el!; }}
                 className="absolute top-6 left-0 w-full h-full pointer-events-auto"
                 style={{ zIndex: i + 1 }}
               >
                 <ProjectCard
-                  label={`Project ${i + 1}`}
                   index={i}
                   title={p.title}
                   description={p.description}
@@ -93,7 +91,6 @@ export default function Proyects() {
         </div>
       </section>
       <section
-      label="Outro Section"
       ref={aboutRefOutro}
       className="flex items-center justify-center px-16 my-18 mt-22 w-1/3 mx-auto">
         <p className="font-bold tracking-wide font-mono text-[#9ca3af]">

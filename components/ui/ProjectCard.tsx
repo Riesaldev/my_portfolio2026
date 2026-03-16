@@ -11,7 +11,7 @@ interface ProjectCardProps {
   tech?: string[];
   code?: string;
   live?: string;
-  status?: "En progreso" | "MVP" | "Finalizado";
+  status?: string;
   image?: string;
   className?: string;
   style?: React.CSSProperties; // ← NECESARIO
@@ -35,7 +35,6 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
   ) => {
     return (
       <div
-        label="Project Card"
         ref={ref}
         style={style} 
         className={cn(
@@ -45,25 +44,27 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
         )}
       >
         {/* Número */}
-        <div label="Project Number" className="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-3 py-1 md:px-4 md:py-2 rounded-full bg-[#007483] border-2 border-white/50 text-white font-mono text-xs md:text-base">
+        <div className="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-3 py-1 md:px-4 md:py-2 rounded-full bg-[#007483] border-2 border-white/50 text-white font-mono text-xs md:text-base">
           Project {index + 1}
         </div>
 
         {/* Imagen */}
-        <div label="Project Image" className="w-full md:w-2/3 h-48 md:h-4/5 relative md:top-10 px-4 md:px-8 py-4 md:py-8 md:mx-4 my-2 rounded-2xl bg-gradient overflow-hidden shrink-0">
+        <div className="w-full md:w-2/3 h-48 md:h-4/5 relative md:top-10 px-4 md:px-8 py-4 md:py-8 md:mx-4 my-2 rounded-2xl bg-gradient overflow-hidden shrink-0">
           <Image
             src={image || "/placeholder.png"}
             width={800}
             height={400}
             alt={title}
             className="w-full h-full object-cover rounded-2xl"
+            sizes="(max-width: 768px) 100vw, 800px"
+            priority={index === 0}
           />
 
           <div className="absolute inset-0 bg-linear-to-br from-black/40 to-transparent pointer-events-none" />
         </div>
 
         {/* Contenido */}
-        <div label="Project Content" className="w-full md:w-1/3 h-full flex flex-col justify-between md:justify-around p-2 md:p-0">
+        <div className="w-full md:w-1/3 h-full flex flex-col justify-between md:justify-around p-2 md:p-0">
           <div className="border-b-2 border-[#00e0ff]/30 py-2 flex flex-col gap-2 md:gap-4 px-2 md:px-4">
             <h3 className="md:text-4xl text-xl text-primary font-bold text-center md:text-left">
               {title}
@@ -72,7 +73,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
               {description}
             </p>
             {tech.length > 0 && (
-              <div label="Project Tech" className="flex flex-wrap gap-1 md:gap-2 justify-center md:justify-end">
+              <div className="flex flex-wrap gap-1 md:gap-2 justify-center md:justify-end">
                 {tech.map((t, i) => (
                   <span
                     key={i}
@@ -90,7 +91,6 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
             <div className="flex gap-3 md:gap-4">
               {code && (
                 <a
-                  label="Project Code"
                   href={code}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -105,7 +105,6 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
 
               {live && (
                 <a
-                  label="Project Live"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={live}
@@ -121,7 +120,6 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
 
             {status && (
               <span
-                  label="Project Status"
                   className={cn(
                     "px-2 py-1 text-xs md:text-sm rounded-md",
                     status === "MVP"

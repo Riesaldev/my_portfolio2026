@@ -2,18 +2,21 @@
 import Image from "next/image";
 import {  useMemo } from "react";
 import { useTheme } from "next-themes";
-import { Cloud, renderSimpleIcon } from "react-icon-cloud";
+
+
+import { Cloud, renderSimpleIcon, ICloud } from "react-icon-cloud";
 
 import * as simpleIcons from 'simple-icons';
+
 
 export const cloudProps = {
   containerProps: {
     style: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "100%",
-      paddingTop: "1rem",
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      paddingTop: '1rem',
     },
   },
   options: {
@@ -21,19 +24,19 @@ export const cloudProps = {
     depth: 1,
     wheelZoom: false,
     imageScale: 2,
-    activeCursor: "pointer",
-    tooltip: "native",
+    activeCursor: 'pointer',
+    tooltip: 'native',
     initial: [0.1, -0.1],
     clickToFront: 500,
     tooltipDelay: 0,
-    outlineColour: "transparent",
+    outlineColour: 'transparent',
     maxSpeed: 0.02,
     minSpeed: 0.02,
     dragControl: true,
-  },
+  } as ICloud['options']
 };
 
-export const renderCustomIcon = (icon, theme) => {
+export const renderCustomIcon = (icon: unknown, theme: string) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
@@ -53,7 +56,7 @@ export const renderCustomIcon = (icon, theme) => {
   });
 };
 
-export default function IconCloud({ iconSlugs = [], imageArray }) {
+export default function IconCloud({ iconSlugs = [], imageArray }: { iconSlugs?: string[]; imageArray?: string[] }) {
   const { theme } = useTheme();
 
   // Calcular los íconos directamente
@@ -70,7 +73,7 @@ export default function IconCloud({ iconSlugs = [], imageArray }) {
   }, [icons, theme]);
 
   return (
-    <Cloud label="Icon Cloud" {...cloudProps}>
+    <Cloud {...cloudProps}>
       <>
         {renderedIcons}
 

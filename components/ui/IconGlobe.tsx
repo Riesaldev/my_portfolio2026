@@ -38,7 +38,7 @@ const slugs = [
 
 export default function IconGlobe() {
   return (
-    <div label="Icon Globe" className="relative flex max-w-screen items-center justify-center overflow-hidden rounded-lg  bg-transparent">
+    <div className="relative flex max-w-screen items-center justify-center overflow-hidden rounded-lg  bg-transparent">
       <IconCloud iconSlugs={slugs} />
     </div>
   );

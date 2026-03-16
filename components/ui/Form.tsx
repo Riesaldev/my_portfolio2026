@@ -51,14 +51,12 @@ const ContactForm = () => {
 
   return (
     <form
-      label="Contact form"
       onSubmit={sendEmail}
       className="w-full max-w-2xl mx-auto flex flex-col gap-6 text-white"
     >
       <div className="flex flex-col gap-2">
         <label className="font-semibold">Name</label>
         <input
-          label="Name"
           type="text"
           name="name"
           placeholder="Your name"
@@ -72,7 +70,6 @@ const ContactForm = () => {
       <div className="flex flex-col gap-2">
         <label className="font-semibold">Email</label>
         <input
-          label="Email"
           type="email"
           name="email"
           placeholder="your@email.com"
@@ -86,7 +83,6 @@ const ContactForm = () => {
       <div className="flex flex-col gap-2">
         <label className="font-semibold">Subject</label>
         <input
-          label="Subject"
           type="text"
           name="subject"
           placeholder="Reason for contact"
@@ -100,7 +96,6 @@ const ContactForm = () => {
       <div className="flex flex-col gap-2">
         <label className="font-semibold">Company</label>
         <input
-          label="Company"
           type="text"
           name="company"
           placeholder="Company name (optional)"
@@ -113,7 +108,6 @@ const ContactForm = () => {
       <div className="flex flex-col gap-2">
         <label className="font-semibold">Description</label>
         <textarea
-          label="Description"
           name="message"
           placeholder="Tell me about your project or inquiry"
           value={form.message}

@@ -4,12 +4,12 @@ import { useAnimateText } from '../hooks/useAnimateText';
 
 
 export default function Exp() {
-  const expRef = useAnimateText({ delay: 0.8, duration: 0.6, stagger: 0.008  });
+  const expRef = useAnimateText<HTMLParagraphElement>({ delay: 0.8, duration: 0.6, stagger: 0.008  });
 
   return (
-    <section label="Experience Section" className="min-h-screen w-full h-auto relative bg-background overflow-hidden" id="experience">
+    <section className="min-h-screen w-full h-auto relative bg-background overflow-hidden" id="experience">
       <main className="w-full grid lg:grid-cols-2 grid-cols-1 gap-8 px-4 md:px-16 py-12">
-        <section label="Aside Section" className="flex items-center justify-center z-10 min-h-75 md:min-h-125">
+        <section className="flex items-center justify-center z-10 min-h-75 md:min-h-125">
           <div className="w-full h-full flex justify-center items-center">
             <IconGlobe />
           </div>

@@ -6,14 +6,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function useAnimateText(options?: {
+export function useAnimateText<T extends HTMLElement = HTMLElement>(options?: {
   delay?: number;
   duration?: number;
   stagger?: number;
   y?: number;
   start?: string;
-}) {
-  const ref = useRef<HTMLElement | null>(null);
+}): React.RefObject<T | null> {
+  const ref = useRef<T | null>(null);
 
   useEffect(() => {
     const root = ref.current;
