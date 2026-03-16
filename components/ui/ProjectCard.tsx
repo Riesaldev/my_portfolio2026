@@ -57,7 +57,6 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
             alt={title}
             className="w-full h-full object-cover rounded-2xl"
             sizes="(max-width: 768px) 100vw, 800px"
-            priority={index === 0}
           />
 
           <div className="absolute inset-0 bg-linear-to-br from-black/40 to-transparent pointer-events-none" />
